@@ -30,12 +30,12 @@ namespace IntroSkip.UI
 
         public void Initialize()
         {
-            GameplaySetup.instance.AddTab("Intro Skip", "IntroSkip.UI.modifier-ui.bsml", this);
+            GameplaySetup.Instance.AddTab("Intro Skip", "IntroSkip.UI.modifier-ui.bsml", this);
         }
 
         public void Dispose()
         {
-                GameplaySetup.instance.RemoveTab("Intro Skip");
+            GameplaySetup.Instance.RemoveTab("Intro Skip");
         }
 
         [UIAction("set-intro-skip-toggle")]
