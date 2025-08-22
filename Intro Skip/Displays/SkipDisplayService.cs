@@ -27,6 +27,8 @@ namespace IntroSkip.Displays
                 canvas.renderMode = RenderMode.WorldSpace;
                 canvas.enabled = false;
 
+                canvas.additionalShaderChannels |= AdditionalCanvasShaderChannels.TexCoord2;
+
                 RectTransform canvasRect = (canvas.transform as RectTransform)!;
                 canvasRect!.sizeDelta = new Vector2(100, 50);
 
