@@ -30,7 +30,8 @@ namespace IntroSkip.Displays
                 RectTransform canvasRect = (canvas.transform as RectTransform)!;
                 canvasRect!.sizeDelta = new Vector2(100, 50);
 
-                _skipPromptText = BeatSaberUI.CreateText(canvasRect, "Press Trigger To Skip", new Vector2(0, 10f));
+                _skipPromptText = BeatSaberUI.CreateCurvedUIText(canvasRect, "Press Trigger To Skip");
+                _skipPromptText.rectTransform.anchoredPosition = new Vector2(0, 10f);
                 RectTransform textTransform = (_skipPromptText.transform as RectTransform)!;
                 textTransform.SetParent(canvas.transform, false);
                 textTransform.sizeDelta = new Vector2(100, 20);
