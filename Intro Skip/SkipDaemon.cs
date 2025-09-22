@@ -25,7 +25,7 @@ namespace IntroSkip
         public bool CanSkip => InIntroPhase || InOutroPhase;
         public bool InIntroPhase => (Utilities.AudioTimeSyncSource(ref _audioTimeSyncController).time < _introSkipTime) && _skippableIntro;
         public bool InOutroPhase => Utilities.AudioTimeSyncSource(ref _audioTimeSyncController).time > _lastObjectSkipTime && Utilities.AudioTimeSyncSource(ref _audioTimeSyncController).time < _outroSkipTime && _skippableOutro;
-        public bool WantsToSkip => _audioTimeSyncController.state == AudioTimeSyncController.State.Playing && (VRPlatformUtils.TriggerValueDefaultImplementation(XRNode.LeftHand) >= .8 || VRPlatformUtils.TriggerValueDefaultImplementation(XRNode.RightHand) >= .8 || Input.GetKey(KeyCode.I));
+        public bool WantsToSkip => _audioTimeSyncController.state == IAudioTimeSource.State.Playing && (VRPlatformUtils.TriggerValueDefaultImplementation(XRNode.LeftHand) >= .8 || VRPlatformUtils.TriggerValueDefaultImplementation(XRNode.RightHand) >= .8 || Input.GetKey(KeyCode.I));
 
         public SkipDaemon(Config config, SiraLog siraLog, IVRPlatformHelper vrPlatformHelper, ISkipDisplayService skipDisplayService, AudioTimeSyncController audioTimeSyncController, IReadonlyBeatmapData readonlyBeatmapData, AudioTimeSyncController.InitData initData)
         {
