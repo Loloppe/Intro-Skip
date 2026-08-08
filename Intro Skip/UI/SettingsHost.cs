@@ -19,8 +19,8 @@ namespace IntroSkip.UI
         [UIValue("intermission-skip-toggle")]
         public bool IntermissionSkipToggle
         {
-            get => _config.AllowIntroSkip;
-            set => _config.AllowIntroSkip = value;
+            get => _config.AllowIntermissionSkip;
+            set => _config.AllowIntermissionSkip = value;
         }
 
         [UIValue("outro-skip-toggle")]
