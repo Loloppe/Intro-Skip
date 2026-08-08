@@ -16,6 +16,13 @@ namespace IntroSkip.UI
             set => _config.AllowIntroSkip = value;
         }
 
+        [UIValue("intermission-skip-toggle")]
+        public bool IntermissionSkipToggle
+        {
+            get => _config.AllowIntroSkip;
+            set => _config.AllowIntroSkip = value;
+        }
+
         [UIValue("outro-skip-toggle")]
         public bool OutroSkipToggle
         {
@@ -40,6 +47,9 @@ namespace IntroSkip.UI
 
         [UIAction("set-intro-skip-toggle")]
         protected void SetIntro(bool value) => IntroSkipToggle = value;
+
+        [UIAction("set-intermission-skip-toggle")]
+        protected void SetIntermission(bool value) => IntermissionSkipToggle = value;
 
         [UIAction("set-outro-skip-toggle")]
         protected void SetOutro(bool value) => OutroSkipToggle = value;
